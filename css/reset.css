@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td, section
+{
+margin: 0; padding: 0; border: 0; outline: none;
+-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+ 
+h1, h2, h3, h4, h5, h6
+{
+font-size: 100%;
+font-family: open-sans;
+padding: .6em 0;
+margin: 0 15px;
+}
+ 
+ul, ol
+{
+list-style: none;
+}
+ 
+a
+{
+text-decoration: none;	 
+}
+.floatLeft
+{
+float: left;
+padding: .5em .5em .5em 0;
+}
+ 
+.floatRight
+{
+float: right;
+padding: .5em 0 .5em .5em;
+}

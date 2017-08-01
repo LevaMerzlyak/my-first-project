@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Обери свою квартиру">
+
+
+<title>Kovalska</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/reset.css" rel="stylesheet">
+ <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+  	<div class="nav__container">
+    	<div class="logo__container">
+        	<div class="logo"></div>
+        </div>
+        <div class="navBtn__container">
+            <a href="http://build.kovalska.com/ru/apartment/" class="navBtn">ВСІ ОБ'ЄКТИ</a>
+        </div>
+    </div>
+  </nav>
+  <section>
+  	<div class="main__container">
+    	<div class="building__container">
+          <a href="http://build.kovalska.com/armyanskaya/" class="house__container">
+              <div class="item__container item__container_house">
+                <div class="item">
+                    <p class="item__title">ЖИТЛОВИЙ БУДИНОК</p>
+                    <p class="item__txt">вул. Вірменська, 6а</p>
+                    <div class="item__location">
+                        <div class="item__district">
+                            <div class="district__icon"></div>
+                            <p class="location__txt">Дарницький район</p>
+                        </div>
+                        <div class="item__staition">
+                            <div class="staiton__icon"></div>
+                            <p class="location__txt">Вирлиця</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="subItem">
+                  <p class="subItem__txt subItem__txt1">ЗАЛИШИЛОСЯ <span id="flat">47</span> КВАРТИР</p><p class="subItem__txt subItem__txt2">У ГОТОВОМУ КОМПЛЕКСІ</p>
+                  <div class="subItemBtn__container">
+                      <div class="subItem__btn subItem__btn_house">ПЕРЕЙТИ НА САЙТ</div>
+                  </div>
+                </div>
+              </div>
+          </a>
+        </div>
+        <div class="building__container">
+          <a href="http://dynastija.com.ua/" class="complex__container">
+              <div class="item__container item__container_complex">
+                <div class="item">
+                    <p class="item__title">ЖК &laquo;ДИНАСТІЯ&raquo;</p>
+                    <p class="item__txt">вул. Липківського, 37г</p>
+                    <div class="item__location">
+                        <div class="item__district">
+                            <div class="district__icon"></div>
+                            <p class="location__txt">Солом'янський район</p>
+                        </div>
+                        <div class="item__staition">
+                            <div class="staiton__icon"></div>
+                            <p class="location__txt">Вокзальна</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="subItem">
+                  <p class="subItem__txt subItem__txt1">НОВИЙ ЖИТЛОВИЙ КОМПЛЕКС</p><p class="subItem__txt subItem__txt2">ПІДВИЩЕНОГО КОМФОРТУ</p><p class="subItem__txt subItem__txt3">У ЦЕНТРІ МІСТА</p>
+                  <div class="subItemBtn__container">
+                      <div class="subItem__btn">ПЕРЕЙТИ НА САЙТ</div>
+                  </div>
+                </div>
+              </div>
+          </a>
+        </div>
+    </div>
+    <div class="choice__container">
+    	<h1 class="choice">ОБЕРИ СВОЮ КВАРТИРУ</h1>
+    </div>
+  </section>
+  <footer>
+  	<div class="footer__container">
+    	<div class="copy__container">
+        	<div class="copy">ПБГ "Ковальська". Усі права захищені (с) 2010-2016</div>
+        </div>
+        <div class="links__container">
+        	<a href="http://build.kovalska.com/ru/commercial/" class="link__item">Коммерційна нерухомість </a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;<a href="http://build.kovalska.com/ru/apartment/pvezha/" class="link__item"> ЖК Паркова Вежа </a>&nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;<a href="http://build.kovalska.com/ru/apartment/sikorskogo/" class="link__item"> ЖК Зелений Острів</a>
+        </div>
+    </div>
+  </footer>
+  <script src="scripts/jquery-2.2.3.min.js"></script>
+  <script>
+  	var flat;
+	$.ajax({
+        url: "flats.txt",
+        dataType: "text",
+        async: true,
+        success: function(msg){
+            flat = msg;
+            $("#flat").html(flat);
+        }
+    });
+  </script>
+</body>
+</html>
